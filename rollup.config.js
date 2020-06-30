@@ -1,10 +1,14 @@
+const packageJson = require('./package.json')
+
+const packageName = packageJson.name
 export default [
   {
     input: 'src/index.js',
     output: {
-      file: 'index.js',
+      file: `./lib/${packageName}.js`,
       format: 'umd',
-      name: 'autils'
+      name: packageName,
+      sourcemap: true
     }
   },
 ]

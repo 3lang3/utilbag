@@ -1,4 +1,4 @@
-const
+export const
   _aSecond = 1000,
   _aMinute = 60 * _aSecond,
   _aHour = 60 * _aMinute,
