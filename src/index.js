@@ -1,9 +1,17 @@
 import * as browser from './browser/index';
+import * as date from './date/index';
+import * as event from './event/index';
 import * as number from './number/index';
-import * as keyboard from './keyboard/index';
+import * as reg from './reg/index';
+import * as string from './string/index';
 
-export default {
-  keyboard,
+const utilbag = {
+  browser,
+  date,
+  event,
   number,
-  browser
+  reg,
+  string
 }
+
+export default utilbag

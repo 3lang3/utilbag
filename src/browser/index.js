@@ -6,37 +6,29 @@ export const isBrowser = () => ![typeof window, typeof document].includes('undef
 /**
  * 检测是否移动设备
  */
-export const isMobile = () => /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(window.navigator.userAgent)
+export const isMobileBrowser = () => /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(window.navigator.userAgent)
+
+/**
+ * 检测是否在webview
+ * 如果想要判断是否用特定app浏览器可以进一步判断ua
+ * 例如wechat的ua包含micromessenger Fb的ua包含FBAN或者FBAV
+ * ref: https://developers.whatismybrowser.com/useragents/explore/software_type_specific/in-app-browser/
+ */
+export const isWebview = () => (
+  /WebView|(iPhone|iPod|iPad)(?!.*Safari\/)|Android.*(wv|\.0\.0\.0)/ig.test(window.navigator.userAgent)
+)
 
 /**
  * 检测安卓webview环境
  */
-export const isAndroid = () => /android/i.test(window.navigator.userAgent)
+export const isAndroidBrowser = () => /android/i.test(window.navigator.userAgent)
 
 /**
  * 检测iOSwebview环境
  */
-export const isIos = () => /(iPhone|iPod|iPad);?/i.test(window.navigator.userAgent)
-
-
-/**
- * 平滑滚动到顶部
- */
-export const scrollToTop = () => {
-  if (!isBrowser()) throw Error('there is not browser env');
-  const c = document.documentElement.scrollTop || document.body.scrollTop;
-  if (c > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, c - c / 8);
-  }
-}
+export const isIosBrowser = () => /(iPhone|iPod|iPad);?/i.test(window.navigator.userAgent)
 
 /**
- * 返回当前滚动位置
- * @param {element} el
- * @return {number}
+ * 检测是否为微信浏览器环境
  */
-export const getScrollPosition = (el = window) => ({
-  x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
-  y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
-})
+export const isWechatBrowser = () => /micromessenger/.test(navigator.userAgent.toLowerCase())

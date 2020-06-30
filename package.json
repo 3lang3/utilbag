@@ -1,5 +1,5 @@
 {
-  "name": "autils",
+  "name": "utilbag",
   "version": "0.0.1",
   "description": "this is javascript utils lib",
   "repository": {
@@ -12,8 +12,9 @@
   },
   "keywords": [
     "util",
-    "tool"
+    "tool",
+    "helper"
   ],
-  "author": "sanlang",
+  "author": "3lang3",
   "license": "ISC"
 }
