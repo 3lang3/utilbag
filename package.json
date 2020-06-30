@@ -1,0 +1,15 @@
+{
+  "name": "autils",
+  "version": "0.0.1",
+  "description": "this is javascript utils lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "util",
+    "tool"
+  ],
+  "author": "3lang",
+  "license": "ISC"
+}
