@@ -93,12 +93,12 @@ describe('Date', function () {
     })
   })
 
-  describe('#isSameTime()', () => {
-    it('test isSameTime', () => {
+  describe('#isSameDate()', () => {
+    it('test isSameDate', () => {
       const [a, b] = [new Date('1991-06-19'), new Date('1991-06-19')]
-      assert.equal(date.isSameTime(a, b), true)
+      assert.equal(date.isSameDate(a, b), true)
       a.setHours(12)
-      assert.equal(date.isSameTime(a, b), false)
+      assert.equal(date.isSameDate(a, b), false)
     })
   })
 

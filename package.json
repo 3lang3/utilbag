@@ -1,12 +1,13 @@
 {
   "name": "utilbag",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "this is javascript utils lib",
   "repository": {
     "type": "git",
     "url": "git@github.com:3lang3/autils.git"
   },
   "main": "lib/utilbag.js",
+  "types": "./types.d.ts",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npm run clean && rollup -c",

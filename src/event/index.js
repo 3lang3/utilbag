@@ -12,7 +12,7 @@ export const scrollToTop = () => {
 /**
  * 返回当前滚动位置
  * @param {element} el
- * @return {number}
+ * @return {{ x: numner, y: number }}
  */
 export const getScrollPosition = (el = window) => ({
   x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,

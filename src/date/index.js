@@ -157,7 +157,7 @@ export const isLeapYear = (year = null) => {
  * @param {date} a 
  * @param {date} b 
  */
-export const isSameTime = (a, b) => a.getTime() === b.getTime()
+export const isSameDate = (a, b) => a.getTime() === b.getTime()
 
 /**
  * 比较两个日期是否在同一天(同年同月)
