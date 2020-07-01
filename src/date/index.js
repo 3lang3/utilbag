@@ -105,7 +105,7 @@ export const calender = (month = 1, year = (new Date).getFullYear()) => {
       matrix[matrix.length] = [];
     }
   }
-  let day = get_clean_date(month, year);
+  let day = getCleanDate(month, year);
   for (var i = 0, lng = day.getDay(); i < lng; i++) {
     putDay(null);
   }
