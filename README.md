@@ -30,4 +30,4 @@ console.log(utilbag.date.today())
 ```
 
 ### API
-ref: [/types.d.ts][utilbag types]
+ref: [utilbag types](./types.d.ts)
