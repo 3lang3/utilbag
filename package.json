@@ -1,12 +1,11 @@
 {
-  "name": "@3lang3/utilbag",
+  "name": "utilbag",
   "version": "0.0.7",
   "description": "this is javascript utils lib",
   "repository": {
     "type": "git",
     "url": "git@github.com:3lang3/utilbag.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "main": "lib/utilbag.js",
   "types": "./types.d.ts",
   "scripts": {
